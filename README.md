@@ -1,11 +1,11 @@
 # PENETRATION TESTING TOOLKIT
 
-**Company:** CODTECH IT Solutions
-**Intern Name:** Vaibhav Kumar Sahu
-**Intern ID:** CT08VYD
-**Domain:** Cybersecurity & Ethical Hacking
-**Duration:** 4 Weeks
-**Mentor:** Neela Santosh
+- **Company:** CODTECH IT Solutions
+- **Intern Name:** Vaibhav Kumar Sahu
+- **Intern ID:** CT08VYD
+- **Domain:** Cybersecurity & Ethical Hacking
+- **Duration:** 4 Weeks
+- **Mentor:** Neela Santosh
 
 The **Penetration Testing Toolkit** is a Python-based project designed to implement fundamental network security tools for penetration testing and ethical hacking education. This toolkit provides a modular and practical way to understand and utilize essential techniques used in cybersecurity assessments.
 
