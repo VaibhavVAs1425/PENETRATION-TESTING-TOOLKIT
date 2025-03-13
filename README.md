@@ -7,11 +7,12 @@
 - **Duration:** 4 Weeks
 - **Mentor:** Neela Santosh
 
+# PROJECT DESCRIPTION
 The **Penetration Testing Toolkit** is a Python-based project designed to implement fundamental network security tools for penetration testing and ethical hacking education. This toolkit provides a modular and practical way to understand and utilize essential techniques used in cybersecurity assessments.
 
 Penetration testing is a crucial aspect of cybersecurity, enabling security professionals to identify vulnerabilities and improve system defenses. This project aims to showcase the power of Python for security tooling and provides a command-line interface (CLI) for users to perform basic penetration testing operations in a controlled and ethical environment.
 
-**Task Details:**
+# TASK DETAILS
 
 **Task Objective:** Develop a Python-based modular toolkit that includes at least a port scanner and a brute-force module for penetration testing education.
 
@@ -34,7 +35,7 @@ Penetration testing is a crucial aspect of cybersecurity, enabling security prof
 *   VS Code (or IntelliJ IDEA / Eclipse / Sublime Text / Thonny) for development.
 *   Command Prompt / PowerShell / Terminal for running the application.
 
-**Features:**
+# Features
 
 **1. Port Scanner Module:**
 
@@ -53,14 +54,14 @@ Penetration testing is a crucial aspect of cybersecurity, enabling security prof
 
 *   The toolkit and individual modules are designed to complete their tasks and then exit gracefully. Users can terminate execution at any time using standard command-line interrupt methods (e.g., Ctrl+C).
 
-**Applicability:**
+# Applicability
 
 *   **Cybersecurity Education:**  Provides a hands-on learning tool for understanding penetration testing fundamentals.
 *   **Network Security Assessment (Ethical Use Only):**  Can be used in controlled environments to assess the security posture of systems you have permission to test.
 *   **Security Tool Development Foundation:** Serves as a basic framework for building more complex and advanced security tools in Python.
 *   **Scripting and Automation in Security:** Demonstrates the use of Python for automating security-related tasks.
 
-**How to Run the Program:**
+# How to Run the Program
 
 1.  **Ensure Python 3.x is installed** on your system. You can verify by running:
     ```bash
@@ -102,7 +103,7 @@ Penetration testing is a crucial aspect of cybersecurity, enabling security prof
 
 6.  **Follow the on-screen prompts and output from the toolkit.**
 
-**Future Enhancements:**
+# Future Enhancements
 
 *   **Graphical User Interface (GUI):** Develop a GUI for improved user experience, potentially using libraries like Tkinter, PyQt, or Kivy.
 *   **More Penetration Testing Modules:** Add modules for other common penetration testing tasks, such as:
@@ -115,10 +116,14 @@ Penetration testing is a crucial aspect of cybersecurity, enabling security prof
 *   **Output to File/Reporting:** Implement options to save scan results and brute-force output to files for reporting and analysis.
 *   **Error Handling and Input Validation:** Enhance error handling and input validation to make the toolkit more robust and user-friendly.
 
-**Conclusion:**
+# Conclusion
 
 This Penetration Testing Toolkit is a foundational project for learning about cybersecurity and penetration testing techniques using Python. It provides practical experience in building modular security tools and understanding essential concepts like port scanning and brute-force attacks. This project serves as a valuable stepping stone for developers interested in pursuing cybersecurity, network security, and ethical hacking domains.
 
-**OUTPUT:**
+# OUTPUT
 
 *This section is left intentionally for you to potentially add example outputs from running your toolkit, or further instructions as you see fit.*
+![INPUT BRUTE_FORCER](https://github.com/user-attachments/assets/8dc0f8b0-3eef-412c-b3e4-00698859fb52)
+![OUTPUT BRUTE_FORCR](https://github.com/user-attachments/assets/afda43a4-05f5-43b8-b684-25c7ab242392)
+![Input port_scanner](https://github.com/user-attachments/assets/4b16fe91-0439-48b8-a402-a4e6a9e8feea)
+![Output Port_scanner](https://github.com/user-attachments/assets/46db3fe5-b31a-451c-93ce-f49fa182906e)
