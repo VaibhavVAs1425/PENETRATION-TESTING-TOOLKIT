@@ -122,11 +122,11 @@ This Penetration Testing Toolkit is a foundational project for learning about cy
 
 # OUTPUT
 
-*This is Input of Brute_Forcer*
 ![INPUT BRUTE_FORCER](https://github.com/user-attachments/assets/8dc0f8b0-3eef-412c-b3e4-00698859fb52)
-*This is Output of Brute_Forcer*
+**This is Input of Brute_Forcer**
 ![OUTPUT BRUTE_FORCR](https://github.com/user-attachments/assets/afda43a4-05f5-43b8-b684-25c7ab242392)
-*This is Input of Port_scanner*
+**This is Output of Brute_Forcer**
 ![Input port_scanner](https://github.com/user-attachments/assets/4b16fe91-0439-48b8-a402-a4e6a9e8feea)
-*This is Output of Port_scanner*
+**This is Input of Port_scanner**
 ![Output Port_scanner](https://github.com/user-attachments/assets/46db3fe5-b31a-451c-93ce-f49fa182906e)
+**This is Output of Port_scanner**
