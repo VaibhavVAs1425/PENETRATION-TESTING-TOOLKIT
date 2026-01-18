@@ -1,0 +1,8 @@
+(Common directories to search for)
+
+admin
+login
+dashboard
+config
+uploads
+images
