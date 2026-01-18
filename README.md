@@ -139,6 +139,11 @@ Bash
 python toolkit.py brute_forcer --target <URL> --usernames users.txt --passwords pass.txt
 ```
 
+### Screenshot :
+
+<img width="852" height="770" alt="image" src="https://github.com/user-attachments/assets/0df07f14-e29a-4a1a-8eca-d571009042a7" />
+
+
 ### ⚠️ Disclaimer
 
 This tool is for educational purposes and ethical testing only. Do not use this toolkit on networks or websites you do not own or do not have explicit permission to test. Unauthorized access is illegal. The developer is not responsible for misuse.
@@ -149,3 +154,4 @@ This tool is for educational purposes and ethical testing only. Do not use this 
 [ ] Subdomain Enumeration: Add DNS reconnaissance capabilities.
 
 [ ] PDF Reporting: Generate professional PDF reports instead of text files.
+
