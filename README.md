@@ -15,7 +15,7 @@
 
 The **Penetration Testing Toolkit** is a Python-based security suite designed to automate essential ethical hacking tasks. Unlike simple scripts, this toolkit uses a modular architecture, allowing users to switch between tools (modules) seamlessly.
 
-**Version 2.0** represents a major upgrade, introducing **multi-threading** for high-speed scanning, a **Graphical User Interface (GUI)** for ease of use, and automated **file reporting**.
+**Version 2.0** represents a major upgrade, introducing **multi-threading** for high-speed scanning, a **Graphical User Interface (GUI)** for ease of use, and a standalone **Executable (.exe)** for instant deployment.
 
 ### Key Objectives
 * **Education:** To demonstrate how security tools interact with network protocols (TCP, HTTP).
@@ -27,131 +27,79 @@ The **Penetration Testing Toolkit** is a Python-based security suite designed to
 ## 🚀 Features & Technical Implementation
 
 ### 1. 🖥️ Graphical User Interface (GUI)
-* **What it does:** Provides a dashboard to configure and run attacks without typing commands.
-* **How it works:** Built with `tkinter`. It acts as a "wrapper," collecting user input and running the backend scripts in a separate thread to keep the interface responsive.
+* **Functionality:** A dashboard to configure and run attacks without typing commands.
+* **Implementation:** Built with `tkinter`. It runs backend scripts in separate threads to keep the interface responsive during long scans.
 
 ### 2. ⚡ Multi-Threaded Port Scanner
-* **What it does:** Scans a target server to find open ports (e.g., 80, 443, 22).
-* **Technical Depth:** Unlike traditional scanners that check ports one by one (Sequential), this module uses `concurrent.futures` to check **100 ports simultaneously**.
-* **Performance:** Scans 1,000 ports in ~10 seconds (vs. 15 minutes sequentially).
+* **Functionality:** Scans a target server to find open ports (e.g., 80, 443, 22).
+* **Technical Depth:** Uses `concurrent.futures` to check **100 ports simultaneously**, reducing scan time by over 90% compared to sequential scanning.
 
 ### 3. 📂 Directory Scanner (Web Enumeration)
-* **What it does:** Hunts for hidden web directories that aren't linked on the homepage (e.g., `/admin`, `/backup`, `/config`).
-* **Logic:** It performs a "dictionary attack" using a wordlist. It analyzes HTTP Status Codes:
-    * `200 OK`: Directory exists (Found).
-    * `403 Forbidden`: Directory exists but is protected (Found).
-    * `404 Not Found`: Directory does not exist.
+* **Functionality:** Hunts for hidden web directories (e.g., `/admin`, `/backup`, `/config`) using a dictionary attack.
+* **Logic:** Analyzes HTTP Status Codes:
+    * `200 OK`: Found.
+    * `403 Forbidden`: Found (Protected).
+    * `404 Not Found`: Does not exist.
 
 ### 4. 🔐 Basic Auth Brute-Forcer
-* **What it does:** Tests the strength of credentials on websites using "HTTP Basic Authentication."
-* **Logic:** Iterates through username and password lists, sending encoded headers to the target until a `200 OK` response is received.
+* **Functionality:** Tests credentials on websites using "HTTP Basic Authentication."
+* **Logic:** Iterates through username/password lists until a valid login (`200 OK`) is found.
 
 ### 5. 📝 Automated Reporting
-* **What it does:** Every scan automatically generates a text file report.
-* **Benefit:** Critical for professional penetration testing documentation.
+* **Functionality:** Every scan automatically generates a text file report (e.g., `gui_report.txt`) for documentation.
 
 ---
 
-## 🛠️ Installation
+## 📥 Installation & Usage
 
-### Prerequisites
-* **Python 3.x** must be installed.
+### Option 1: Run the Executable (Recommended for Users)
+*No Python installation required.*
+1.  Go to the **Releases** section of this repository.
+2.  Download `PenetrationToolkit_v2.zip`.
+3.  **Extract the zip file** (Important: The `.exe` needs the `wordlists` folder to be in the same location).
+4.  Double-click `PenetrationToolkit.exe` to launch.
 
-### Step 1: Clone or Download
-Download the project files to your local machine. Ensure you have the following file structure:
-```text
-/Project_Folder
-  ├── toolkit.py           (Main Controller)
-  ├── port_scanner.py      (Module)
-  ├── dir_scanner.py       (Module)
-  ├── brute_forcer.py      (Module)
-  ├── gui_app.py           (GUI Launcher)
-  ├── requirements.txt     (Dependencies)
-  └── wordlists/           (Optional folder for txt files)
-```
+### Option 2: Run from Source Code (For Developers)
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/VaibhavVAs1425/PENETRATION-TESTING-TOOLKIT.git](https://github.com/VaibhavVAs1425/PENETRATION-TESTING-TOOLKIT.git)
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Run the GUI:**
+    ```bash
+    python gui_app.py
+    ```
 
-### Step 2: Install Dependencies
-Open your terminal/command prompt in the project folder.
+---
 
-For Windows:
-```text
-Bash
+## 💻 Command Line Usage (CLI)
 
-pip install -r requirements.txt
-```
+If you prefer the terminal, you can run `toolkit.py` directly:
 
-For Linux (Kali/Ubuntu): Linux users often need to install tkinter separately.
-
-```text
-Bash
-
-sudo apt-get update
-sudo apt-get install python3-tk
-pip3 install -r requirements.txt
-```
-
-### 💻 Usage Guide
-**A. Using the GUI (Recommended)**
-This is the easiest way to use the toolkit.
-
-1. Run the application:
-
-```text
-Bash
-
-python gui_app.py
-```
-
-2. Select a Module (e.g., "Port Scanner").
-
-3. Enter Target (e.g., scanme.nmap.org or http://example.com).
-
-4. Configure Options (Port range or Wordlist file).
-
-5. Click RUN MODULE.
-
-6. The results will appear in the black log window and be saved to gui_report.txt.
-
-**B. Using the Command Line (CLI)**
-For advanced users who prefer the terminal.
-
-1. Run Port Scanner
-
-```text
-Bash
-
+**1. Run Port Scanner**
+```bash
 python toolkit.py port_scanner --target <IP_ADDRESS> --ports 1-1000 --output scan_results.txt
 ```
 
 2. Run Directory Scanner
 
-```text
-Bash
+```Bash
 
-python toolkit.py dir_scanner --target <URL> --wordlist dirs.txt --output dir_results.txt
+python toolkit.py dir_scanner --target <URL> --wordlist wordlists/dirs.txt
 ```
 
 3. Run Brute Forcer
 
-```text
-Bash
+```Bash
 
-python toolkit.py brute_forcer --target <URL> --usernames users.txt --passwords pass.txt
+python toolkit.py brute_forcer --target <URL> --usernames wordlists/usernames.txt --passwords wordlists/passwords.txt
 ```
 
-### Screenshot :
-
-<img width="852" height="770" alt="image" src="https://github.com/user-attachments/assets/0df07f14-e29a-4a1a-8eca-d571009042a7" />
+## Screenshot:
 
 
-### ⚠️ Disclaimer
-
+## ⚠️ Disclaimer
 This tool is for educational purposes and ethical testing only. Do not use this toolkit on networks or websites you do not own or do not have explicit permission to test. Unauthorized access is illegal. The developer is not responsible for misuse.
-
-### 🔮 Future Roadmap
-[ ] Vulnerability Scanner: Integrate CVE lookup for open ports.
-
-[ ] Subdomain Enumeration: Add DNS reconnaissance capabilities.
-
-[ ] PDF Reporting: Generate professional PDF reports instead of text files.
-
