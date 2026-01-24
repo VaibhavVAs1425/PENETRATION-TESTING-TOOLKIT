@@ -4,14 +4,18 @@ import brute_forcer
 import dir_scanner
 
 def main():
-    # Initialize the argument parser with a description
+    """
+    Main controller for the CLI (Command Line Interface).
+    Parses user arguments and directs them to the appropriate module.
+    """
+    # Create the argument parser
     parser = argparse.ArgumentParser(description="Penetration Testing Toolkit v2.0")
     
-    # Define the allowed modules
+    # Argument: Module selection (Required)
     parser.add_argument("module", choices=['port_scanner', 'brute_forcer', 'dir_scanner'], 
                         help="Select the module to run")
     
-    # Define optional arguments (some are required depending on the module)
+    # Arguments: Configuration (Optional depending on module)
     parser.add_argument("--target", help="Target IP address or URL")
     parser.add_argument("--ports", help="Port range for port scanner (e.g., 1-100)")
     parser.add_argument("--usernames", help="Path to username list file for brute-forcer")
@@ -21,12 +25,11 @@ def main():
 
     args = parser.parse_args()
 
-    # Route the request to the correct module based on user input
+    # Logic to select and run the correct module
     if args.module == 'port_scanner':
         if not args.target or not args.ports:
             print("Error: Port scanner requires --target and --ports arguments.")
             return
-        # Calls the threaded scan function
         port_scanner.main_scan_function(args.target, args.ports, args.output)
         
     elif args.module == 'brute_forcer':
