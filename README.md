@@ -59,6 +59,22 @@ The **Penetration Testing Toolkit** is a Python-based security suite designed to
 3.  **Extract the zip file** (Important: The `.exe` needs the `wordlists` folder to be in the same location).
 4.  Double-click `PenetrationToolkit.exe` to launch.
 
+## Project Structure:
+
+/Penetration-Testing-Toolkit
+  ├── README.md           <-- The documentation
+  ├── requirements.txt    <-- The library list
+  ├── toolkit.py          <-- Main command-line tool
+  ├── gui_app.py          <-- The GUI (Source code)
+  ├── port_scanner.py     <-- Scanner Module
+  ├── dir_scanner.py      <-- Directory Module
+  ├── brute_forcer.py     <-- Brute Force Module
+  └── wordlists/          <-- Folder containing your .txt files
+      ├── dirs.txt
+      ├── usernames.txt
+      └── passwords.txt
+      
+
 ### Option 2: Run from Source Code (For Developers)
 1.  **Clone the repository:**
     ```bash
@@ -103,3 +119,4 @@ python toolkit.py brute_forcer --target <URL> --usernames wordlists/usernames.tx
 
 ## ⚠️ Disclaimer
 This tool is for educational purposes and ethical testing only. Do not use this toolkit on networks or websites you do not own or do not have explicit permission to test. Unauthorized access is illegal. The developer is not responsible for misuse.
+
