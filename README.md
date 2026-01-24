@@ -60,7 +60,7 @@ The **Penetration Testing Toolkit** is a Python-based security suite designed to
 4.  Double-click `PenetrationToolkit.exe` to launch.
 
 ## Project Structure:
-
+```
 /Penetration-Testing-Toolkit
   ├── README.md           <-- The documentation
   ├── requirements.txt    <-- The library list
@@ -73,6 +73,7 @@ The **Penetration Testing Toolkit** is a Python-based security suite designed to
       ├── dirs.txt
       ├── usernames.txt
       └── passwords.txt
+```
       
 
 ### Option 2: Run from Source Code (For Developers)
@@ -119,4 +120,5 @@ python toolkit.py brute_forcer --target <URL> --usernames wordlists/usernames.tx
 
 ## ⚠️ Disclaimer
 This tool is for educational purposes and ethical testing only. Do not use this toolkit on networks or websites you do not own or do not have explicit permission to test. Unauthorized access is illegal. The developer is not responsible for misuse.
+
 
